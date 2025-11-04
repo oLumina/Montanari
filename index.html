@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araujo & Montanari | Advocacia e Assessoria Jurídica</title>
+    <meta name="description" content="Escritório de Advocacia Araujo & Montanari, especializado em assessoria jurídica completa e personalizada em Santo André/SP.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+        :root {
+            --primary-color: #800000; /* Vermelho escuro do logo */
+            --dark-color: #2c2c2c;      /* Cinza escuro para texto */
+            --light-color: #f4f4f4;     /* Fundo suave */
+            --white-color: #ffffff;
+            --serif-font: 'Cormorant Garamond', serif;
+            --sans-serif-font: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans-serif-font);
+            color: var(--dark-color);
+            line-height: 1.7;
+            background-color: var(--white-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--serif-font);
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            margin-top: 80px; /* Header height */
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1589994965851-a8f483c5132c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            color: var(--white-color);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--white-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+
+        /* About Section */
+        #sobre {
+            background: var(--light-color);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .about-lawyer {
+            flex: 1;
+            text-align: center;
+            padding: 2rem;
+            background: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .about-lawyer h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-lawyer p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Areas Section */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .area-card {
+            background: var(--white-color);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .area-card .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .area-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contato Section */
+        #contato {
+            background: var(--light-color);
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info, .contact-map {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item .icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+            width: 30px;
+        }
+        
+        .contact-item a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-socials {
+            margin-top: 2rem;
+        }
+        
+        .contact-socials a {
+            color: var(--dark-color);
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-socials a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+        }
+        
+        .footer .logo-footer {
+            max-width: 200px;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simple responsive: hide nav links on mobile */
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            #hero {
+                height: 60vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content, .contact-wrapper {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#hero">
+                <img src="https://i.ibb.co/6g25g3S/logo-araujo-montanari.png" alt="Logo Araujo & Montanari" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#areas">Áreas de Atuação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Araujo & Montanari</h1>
+                <p>Advocacia e Assessoria Jurídica com foco em soluções personalizadas e eficientes para você e sua empresa.</p>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre o Escritório</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Bem-vindo ao Araujo & Montanari Advocacia e Assessoria Jurídica. Nosso compromisso é com a excelência, ética e a busca incansável pela justiça. Atuamos com uma abordagem moderna e estratégica, oferecendo soluções jurídicas personalizadas que atendem às necessidades específicas de cada cliente.</p>
+                        <p>Com uma comunicação clara e transparente, construímos relações de confiança e parceria, garantindo segurança e tranquilidade em todas as etapas do processo. Nossa missão é defender seus direitos com determinação e profissionalismo.</p>
+                    </div>
+                    <div class="about-lawyer">
+                        <h3>Dra. Carolina F. Montanari Barbosa</h3>
+                        <p>OAB/SP 437.305</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="areas">
+            <div class="container">
+                <h2>Áreas de Atuação</h2>
+                <div class="areas-grid">
+                    <div class="area-card">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h3>Direito de Família</h3>
+                        <p>Atuação em divórcios, partilha de bens, pensão alimentícia, guarda de menores e inventários.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="icon"><i class="fas fa-file-signature"></i></div>
+                        <h3>Direito Civil</h3>
+                        <p>Consultoria em contratos, responsabilidade civil, direito das obrigações e questões imobiliárias.</p>
+                    </div>
+                    <div class="area-card">
+                        <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                        <h3>Direito do Consumidor</h3>
+                        <p>Defesa dos direitos do consumidor em casos de produtos defeituosos, práticas abusivas e publicidade enganosa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Entre em contato e agende uma consulta.</h3>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                            <!-- IMPORTANTE: Substitua o número de telefone abaixo pelo seu WhatsApp -->
+                            <a href="https://wa.me/5511900000000" target="_blank">
+                                (11) 90000-0000
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                             <!-- IMPORTANTE: Substitua o e-mail abaixo pelo seu e-mail de contato -->
+                            <a href="mailto:contato@araujoemontanari.com.br">
+                                contato@araujoemontanari.com.br
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <a href="https://www.google.com/maps/place/R.+Laura,+49+-+Vila+Bastos,+Santo+Andr%C3%A9+-+SP,+09040-240" target="_blank">
+                                Rua Laura, 49 - sala 06 - Centro<br>
+                                Santo André/SP - 09040-240
+                            </a>
+                        </div>
+                        
+                        <div class="contact-socials">
+                             <!-- Adicione aqui links para redes sociais, se houver -->
+                             <!-- Exemplo: <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                             <!-- Exemplo: <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.693355523098!2d-46.53500582377803!3d-23.65116796535544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42c069143a1b%3A0x23a351914561085!2sR.%20Laura%2C%2049%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-240!5e0!3m2!1spt-BR!2sbr!4v1689277395011!5m2!1spt-BR!2sbr" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+             <img src="https://i.ibb.co/6g25g3S/logo-araujo-montanari.png" alt="Logo Araujo & Montanari" class="logo-footer">
+            <p>&copy; 2024 Araujo & Montanari | Advocacia e Assessoria Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
